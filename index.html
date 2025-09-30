@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>Try jQuery</title></head>
+<body>
+  <p id="text">Hello</p>
+  <button id="change">Change</button>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(function(){
+      $('#change').click(function(){
+        $('#text').text('jQuery is working ✅').fadeOut(300).fadeIn(600);
+      });
+    });
+  </script>
+</body>
+</html>
