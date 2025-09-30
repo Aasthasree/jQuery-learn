@@ -1,17 +1,62 @@
 <!doctype html>
 <html>
-<head><meta charset="utf-8"><title>Try jQuery</title></head>
-<body>
-  <p id="text">Hello</p>
-  <button id="change">Change</button>
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script>
-    $(function(){
-      $('#change').click(function(){
-        $('#text').text('jQuery is working ✅').fadeOut(300).fadeIn(600);
-      });
-    });
-  </script>
+<head>
+    <meta charset="utf-8">
+    <title>Try jQuery</title>
+</head>
+
+<body>
+    <div id="readyDemo">
+
+    </div>
+
+    <a href="google.com" target="_blank">Google</a>
+    <a href="google.com" target="_self">Google</a>
+
+    <p>List 1:</p>
+
+    <ul id="item-list">
+        <li id="first-list">
+            coffee
+            <a href="google.com">google.com</a>
+            <div>
+                <a href="google.com" id="">yahoo.com</a>
+            </div>
+        </li>
+
+        <li>Milk</li>
+        <li>tea</li>
+
+    </ul>
+
+    <button>Click me</button>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // ready
+        $(document).ready(function () {
+            $('#readyDemo').text('Message is ready!');
+        });
+        // jQuery function chaning
+        $(document).ready(function () {
+            $('#readyDemo').text('Hello world').css('color', 'red').fadeIn('slow');
+        })
+        // attribute selector
+        // $("a[target = '_self']").css('color', 'green');
+
+        // position selectors
+        // $("#item-list > li:first").css('color', 'red');
+
+        //pseudo selectors
+      $("a:not([href='google.com'])").text('Yahoo');
+
+        $("button").click(function() {
+            // find example
+            $('#item-list').find("a").css('color','red');
+        })
+    </script>
 </body>
+
 </html>
