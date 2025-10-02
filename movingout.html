@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery-add/remove</title>
+    <style>
+        .golden-link {
+          color: gold;
+        }
+
+        .middle {
+            color: lightblue;
+        }
+    </style>
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <!-- <ul>
+
+        <li>
+            <a href="google.com">Google</a>
+        </li>
+        <li class="middle">
+            <a href="yahoo.com">Yahoo</a>
+        </li>
+         <li class="middle">
+            <a href="alibaba.com">Alibaba</a>
+        </li>
+        <li>
+            <a target="_self" href="amazon.com">Amazon</a>
+        </li>
+    </ul> -->
+    <script>
+        // $(document).ready(function () {
+        //     var numList = [1,2,3,4,5,6]
+        //     $.each(numList, function(index, value) {
+        //         console.log(index, value);
+        //     })
+
+        //     $('li').each(function(index,element) {
+        //       $(this).toggleClass('golden-link');
+        //     })
+        // })
+
+        // $('li').eq(2).toggleClass('golden-link');
+
+         $('li').filter('.middle').toggleClass('golden-link')
+    </script>
+</body>
+
+</html>

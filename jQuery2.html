@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery-add/remove</title>
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div>
+        <div class="color-box after">
+            After
+        </div>
+        <div class="color-box before">
+            Before
+        </div>
+        <div class="color-box append">
+            Append
+        </div>
+        <div class="color-box prepend">
+            Prepend
+        </div>
+    </div>
+    <script>
+
+        $('.after').click(function() {
+            $('after').append('div class="color-box attached">')
+        })
+       
+    </script>
+</body>
+
+</html>
